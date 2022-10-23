@@ -7,15 +7,20 @@ import { TierSection } from './components/TierSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { EventScheduleSection } from './components/EventScheduleSection';
 import { Footer } from './components/footer';
+import { Parallax } from './components/Parallax';
 
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 `
 
 function App() {
   return (
     <Layout>
+      <Parallax/>
       <Hero/>
       <AboutSection/>
       <TierSection/>

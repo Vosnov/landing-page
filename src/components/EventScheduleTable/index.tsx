@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   border: 1px solid #E0E0E0;
   border-radius: 24px;
   margin-top: 40px;
+  background-color: #FFF;
 `
 
 const Table = styled.table`
