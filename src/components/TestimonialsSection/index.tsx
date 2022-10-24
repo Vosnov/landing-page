@@ -1,11 +1,17 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { device } from "../../constants";
 import { Container } from "../Container";
 import { TestimonialsCard } from "../TestimonialsCard";
 
 const Wrapper = styled.section`
   width: 100%;
+  padding: 0 10px;
+
+  @media ${device.laptop} {
+    padding: 0;
+  }
 `
 
 const Title = styled.p`
@@ -26,8 +32,15 @@ export const TestimonialsSection: FC = () => {
         <Title>Testimonials</Title>
       </Container>
       <StyledSwiper
+          breakpoints={{
+            450: {
+              slidesPerView: 2,
+            },
+            900: {
+              slidesPerView: 3
+            },
+          }}
         spaceBetween={30}
-        slidesPerView={3}
         centeredSlides
         initialSlide={1}
       >

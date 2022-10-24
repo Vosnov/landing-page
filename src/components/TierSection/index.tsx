@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { device } from "../../constants";
 import { Container } from "../Container";
 import { TierCard } from "../TierCard";
 
@@ -7,16 +8,25 @@ const Title = styled.p`
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 60px;
+  text-align: center;
 `
 
 const Cards = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
 `
 
 const StyledContainer = styled(Container)`
-  margin-bottom: 240px;
+  padding: 0 10px;
+
+
+  @media ${device.laptop} {
+    padding: 0
+  }
 `
 
 export const TierSection: FC = () => {

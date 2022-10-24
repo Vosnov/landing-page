@@ -15,6 +15,7 @@ const Layout = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 1;
+  gap: 120px;
 `
 
 function App() {

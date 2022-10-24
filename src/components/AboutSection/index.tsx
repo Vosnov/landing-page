@@ -4,19 +4,32 @@ import 'swiper/css';
 import { SingersImage } from "../../assets/images";
 import { AboutImage } from "../../assets/images";
 import { CategoryCardSlider } from "../../CategoryCardSlider";
+import { device } from "../../constants";
 import { Button } from "../Button";
 import { Container } from "../Container";
 
 const Wrapper = styled.section`
-  margin-top: 240px; 
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  flex-direction: column;
 
-  &:last-child {
-    margin-bottom: 240px;
+  img {
+    order: 0
+  }
+
+  div {
+    order: 1;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    
+    img, div {
+      order: initial
+    }
   }
 `
 
@@ -35,22 +48,50 @@ const Label = styled.p`
 const TextContent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+
+  @media ${device.laptop} {
+    align-items: flex-start;
+  }
 `
 
 const StyledAboutImage = styled.img`
-  width: 550px;
+  width: auto;
+
+  @media ${device.desktop} {
+    width: 550px;
+  }
 `
 
 const StyledSingerImage = styled.img`
-  width: 672px;
+  width: auto;
+
+  @media ${device.desktop} {
+    width: 672px;
+  }
+`
+
+const StyledContainer = styled(Container)`
+  gap: 120px;
+`
+
+const RootWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  gap: 120px;
+
+  @media ${device.laptop} {
+    padding: 0
+  }
 `
 
 export const AboutSection: FC = () => {
   return (
-    <>
+    <RootWrapper>
       <CategoryCardSlider/>
-      <Container>
+      <StyledContainer>
         <Wrapper>
           <StyledAboutImage src={AboutImage}/>
           <TextContent>
@@ -67,7 +108,7 @@ export const AboutSection: FC = () => {
           </TextContent>
           <StyledSingerImage src={SingersImage}/>
         </Wrapper>
-      </Container>
-    </>
+      </StyledContainer>
+    </RootWrapper>
   )
 }

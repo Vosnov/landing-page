@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { HeroImage } from "../../assets/images";
+import { device } from "../../constants";
 import { Button } from "../Button";
 import { Container } from "../Container";
 import { Header } from "../Header";
@@ -13,14 +14,28 @@ const Wrapper = styled.div`
   background-size: cover;
   height: 964px;
   position: relative;
+
+  padding: 0 10px;
+  @media ${device.laptop} {
+    padding: 0;
+  }
 `
 
 const Title = styled.p`
   font-weight: bold;
-  font-size: 72px;
-  margin-top: 105px;
+  font-size: 42px;
+  margin-top: 60px;
   text-align: center;
   color: #FFF;
+
+  @media ${device.mobileL} {
+    font-size: 42px;
+  }
+
+  @media ${device.desktop} {
+    font-size: 72px;
+    margin-top: 105px;
+  }
 `
 
 const SubTitle = styled.p`
@@ -37,7 +52,7 @@ const Buttons = styled.div`
 `
 
 const Content = styled.div`
-  width: 970px;
+  max-width: 970px;
   display: flex;
   flex-direction: column;
   align-items: center;

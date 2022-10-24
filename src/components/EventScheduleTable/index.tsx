@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   border-radius: 24px;
   margin-top: 40px;
   background-color: #FFF;
+  overflow: auto;
 `
 
 const Table = styled.table`
@@ -15,6 +16,7 @@ const Table = styled.table`
   border-collapse: collapse;
   border-radius: 24px;
   overflow: hidden;
+  min-width: 400px;
 
   thead {
     background: rgba(56, 29, 219, 0.05);

@@ -1,14 +1,28 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
+import { device } from "../../constants";
 
 const Time = styled.p`
   font-weight: 700;
-  font-size: 144px;
+  font-size: 26px;
   line-height: 176px;
   color: #FFF;
-  margin-top: 120px;
+  margin-top: 60px;
   color: transparent;
   -webkit-text-stroke: 1px #FFF;
+  
+  @media ${device.mobileS} {
+    font-size: 38px;
+  }
+
+  @media ${device.laptop} {
+    font-size: 82px;
+  }
+  
+  @media ${device.desktop} {
+    font-size: 144px;
+    margin-top: 120px;
+  }
 `
 
 type TimeData = {

@@ -19,7 +19,6 @@ const Title = styled.p`
   font-size: 34px;
   font-weight: bold;
   margin-bottom: 60px;
-  margin-top: 240px;
   text-align: left;
   width: 100%;
 ` 
@@ -71,7 +70,7 @@ export const CategoryCardSlider: FC = () => {
       </Container>
       <StyledSwiper
         breakpoints={{
-          600: {
+          450: {
             slidesPerView: 2,
           },
           900: {

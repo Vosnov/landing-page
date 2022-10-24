@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { device } from "../../constants";
 import { Container } from "../Container";
 import { EventScheduleTable } from "../EventScheduleTable";
 import { TabData, Tabs } from "../Tabs";
@@ -7,8 +8,15 @@ import { TabData, Tabs } from "../Tabs";
 const Title = styled.p`
   font-size: 34px;
   font-weight: bold;
-  margin-top: 160px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+`
+
+const StyledContainer = styled(Container)`
+  padding: 0 10px;
+
+  @media ${device.laptop} {
+    padding: 0;
+  }
 `
 
 const tabs: TabData[] = [
@@ -19,9 +27,9 @@ const tabs: TabData[] = [
 
 export const EventScheduleSection: FC = () => {
   return (
-    <Container>
+    <StyledContainer>
       <Title>Event Schedule</Title>
       <Tabs tabs={tabs}/>
-    </Container>
+    </StyledContainer>
   )
 }

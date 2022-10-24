@@ -7,7 +7,7 @@ const Wrapper = styled.footer`
   background-color: #222222;
   width: 100%;
   margin-top: 60px;
-  padding: 40px 0 35px 0;
+  padding: 40px 10px 35px 10px;
 `
 
 const StyledContainer = styled(Container)`
@@ -24,11 +24,13 @@ const Info = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 30px;
 `
 
 const Links = styled.div`
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 `
 
 const Link = styled.a`
