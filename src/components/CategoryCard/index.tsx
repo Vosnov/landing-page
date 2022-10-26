@@ -37,7 +37,7 @@ export const CategoryCard: FC<Props> = ({
 }) => {
   return (
     <Wrapper color={color}>
-      <Image src={img}/>
+      <Image alt="Category Icon" src={img}/>
       <Title>{title}</Title>
       <Label>Duis nec sodales nibh. Proin lectus tortor, rutrum vel vulputate vitae</Label>
     </Wrapper>

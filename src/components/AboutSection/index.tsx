@@ -56,19 +56,11 @@ const TextContent = styled.div`
 `
 
 const StyledAboutImage = styled.img`
-  width: auto;
-
-  @media ${device.desktop} {
-    width: 550px;
-  }
+  width: 550px;
 `
 
 const StyledSingerImage = styled.img`
-  width: auto;
-
-  @media ${device.desktop} {
-    width: 672px;
-  }
+  width: 672px;
 `
 
 const StyledContainer = styled(Container)`
@@ -93,7 +85,7 @@ export const AboutSection: FC = () => {
       <CategoryCardSlider/>
       <StyledContainer>
         <Wrapper>
-          <StyledAboutImage src={AboutImage}/>
+          <StyledAboutImage alt={'About Image'} src={AboutImage}/>
           <TextContent>
             <Title>About Musik</Title>
             <Label>Fusce justo mi, vehicula id arcu et, dapibus tristique lectus. Vivamus a elit sodales, tincidunt nunc non, maximus lacus. Fusce a augue sed dolor auctor iaculis vitae id mauris. Integer ut lectus non neque suscipit luctus. Mauris et erat id ipsum condimentum cursus. Sed tempus enim non massa mattis iaculis. In quis massa risus</Label>
@@ -106,7 +98,7 @@ export const AboutSection: FC = () => {
             <Label>Fusce justo mi, vehicula id arcu et, dapibus tristique lectus. Vivamus a elit sodales, tincidunt nunc non, maximus lacus. Fusce a augue sed dolor auctor iaculis vitae id mauris. Integer ut lectus non neque suscipit luctus. Mauris et erat id ipsum condimentum cursus. Sed tempus enim non massa mattis iaculis. In quis massa risus</Label>
             <Button theme={'blue'}>Learn More</Button>
           </TextContent>
-          <StyledSingerImage src={SingersImage}/>
+          <StyledSingerImage alt={"Singer Image"} src={SingersImage}/>
         </Wrapper>
       </StyledContainer>
     </RootWrapper>

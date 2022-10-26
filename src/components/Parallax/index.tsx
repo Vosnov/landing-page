@@ -37,7 +37,7 @@ export const Parallax: FC = () => {
     <Wrapper style={{
       transform: `translateY(${offsetY * 0.5}px)`,
     }}>
-      {confettiArray.map((item) => <Confetti style={{left: item.left, top: item.top}} src={item.img}/>)}
+      {confettiArray.map((item) => <Confetti style={{left: item.left, top: item.top}} alt="Confetti" src={item.img}/>)}
     </Wrapper>
   )
 }

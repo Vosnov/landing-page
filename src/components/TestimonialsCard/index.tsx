@@ -82,12 +82,12 @@ export const TestimonialsCard: FC = () => {
   return (
     <Wrapper className="testimonials">
       <Text>
-        <Quotes direction="left" src={QuotesImage}/>
-        <Quotes direction="right" src={QuotesImage}/>
+        <Quotes alt="Quotes Image" direction="left" src={QuotesImage}/>
+        <Quotes alt="Quotes Image" direction="right" src={QuotesImage}/>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
       </Text>
       <Profile>
-        <Avatar src={AvatarImage}/>
+        <Avatar alt="Avatar" src={AvatarImage}/>
         <Name>Johnny Doe</Name>
         <Link href="#">placeholder.com</Link>
       </Profile>

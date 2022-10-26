@@ -57,16 +57,16 @@ export const Footer: FC = () => {
           </Links>
           <Links>
             <Link href="/">
-              <SocialImage src={FacebookImage}/>
+              <SocialImage aria-label="Facebook" alt="Social Image" src={FacebookImage}/>
             </Link>
             <Link href="/">
-              <SocialImage src={FacebookImage}/>
+              <SocialImage aria-label="Facebook" alt="Social Image" src={FacebookImage}/>
             </Link>
             <Link href="/">
-              <SocialImage src={FacebookImage}/>
+              <SocialImage aria-label="Facebook" alt="Social Image" src={FacebookImage}/>
             </Link>
             <Link href="/">
-              <SocialImage src={FacebookImage}/>
+              <SocialImage aria-label="Facebook" alt="Social Image" src={FacebookImage}/>
             </Link>
           </Links>
         </Info>
